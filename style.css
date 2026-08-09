@@ -1328,3 +1328,71 @@ footer{
         font-size:28px;
     }
 }
+/* ================================
+   ARK INTRO
+================================ */
+
+#ark-intro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #2b1b10 0%,
+            #100b07 50%,
+            #030303 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+}
+
+/* Logo */
+
+.intro-logo {
+    width: 260px;
+
+    opacity: 0;
+    transform: scale(0.7);
+
+    animation: arkLogoIn 1.5s ease forwards;
+}
+
+.intro-logo img {
+    width: 100%;
+    display: block;
+}
+
+/* Logo entrance */
+
+@keyframes arkLogoIn {
+
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+        filter: blur(12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+
+}
+
+/* Intro disappears */
+
+#ark-intro.hide-intro {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease;
+}
