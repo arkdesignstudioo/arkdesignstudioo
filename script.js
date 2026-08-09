@@ -414,3 +414,18 @@ console.log(
 console.log(
 "Website Designed with ❤️"
 );
+/* ================================
+   ARK INTRO
+================================ */
+
+window.addEventListener("load", function () {
+
+    const intro = document.getElementById("ark-intro");
+
+    setTimeout(function () {
+
+        intro.classList.add("hide-intro");
+
+    }, 2500);
+
+});
